@@ -12,6 +12,7 @@ div{
     background-color: green;
     color: yellow;
     border-color: blue;
+    margin: 1px;
   }
 
   .esconde{
