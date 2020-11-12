@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="./bootstrap.min.css" >
+  <link rel="stylesheet" href="comando-studio.css">
+  <script>
+    function escuro() {
+      document.getElementById("escuro").style.backgroundColor= "black" ;
+    }
+    function recording(){
+      alert("Este programa está a gravar!")
+    }
+
+    function welcome(){
+      alert("Bem-vindo caro utilizador!")
+    }
+  
+  
+  
+  var counter="";
+  var i=counter.length;
+  function canais(a){
+    var numero = "canal_" + a;
+    var letra =document.getElementById(numero).innerText;
+    counter +=letra;
+    i++
+    if (i>= 2){
+      alert("Você escolheu o canal " + counter)
+      counter="";
+      i=counter.length;
+    }
+  }
+
+   
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+</head>
+
+
+
+<div class="container-fluid" >
+    <div class="row" >
+        <div class="col-6" id="escuro" style="background-color:#A9A9A9" >
+            <div class="row">
+              <div class="col-12" style="background-color:blue;"> <button  onclick="welcome()" class="btn btn-danger"> ON/OFF </button> </div>
+            </div>
+            <div class="row">
+              <div class="col-6"><button class="btn btn-primary"> Channel + </button> </div>
+              <div class="col-6 "> <button class="btn btn-primary">DEF AVAN  </button> </div>
+            </div>
+          <div class="row">
+                <div class="col-6 "> <button class="btn btn-primary"> Channel - </button> </div>
+                <div class="col-6 "> <button class="btn btn-primary"> MUTE </button> </div>
+            </div>
+             <div class="row">
+                <div class="col-12"> <button class="btn btn-primary"> Voltar </button> </div>
+            </div>
+          <div class="row">
+                <button onclick="recording()" style="border-radius: 50%; word-spacing: 10px;margin-left: 5px;background-color:red " > <div class="col-2"  ></div> </button>
+                <div class="col-2"> <button class="btn btn-primary">Play </button> </div>
+                <div class="col-2"> <button class="btn btn-primary">Pause </button> </div>
+                <div class="col-2"> <button class="btn btn-primary"> <<< </button> </div>
+                <div class="col-2"> <button class="btn btn-primary"> >>> </button> </div>
+            </div>
+          <div class="row"><button data-toggle="collapse" data-target="#demo">Teclado Numérico</button>
+
+            <div id="demo" class="collapse">
+              <div class="col-12">
+                <div class="row">
+                  <button class="btn btn-primary" id="canal_1" onclick="canais(1)"> <div class="col-4">  1  </div> </button>
+                  <button class="btn btn-primary" id="canal_2" onclick="canais(2)"> <div class="col-4">  2  </div> </button>
+                  <button class="btn btn-primary" id="canal_3" onclick="canais(3)"> <div class="col-4">  3  </div> </button>
+                </div>
+                <div class="row">
+                  <button class="btn btn-primary" id="canal_4" onclick="canais(4)"> <div class="col-4">  4  </div> </button>
+                  <button class="btn btn-primary" id="canal_5" onclick="canais(5)"> <div class="col-4">  5  </div> </button>
+                  <button class="btn btn-primary" id="canal_6" onclick="canais(6)"> <div class="col-4">  6  </div> </button>
+                </div>
+                <div class="row">
+                  <button class="btn btn-primary" id="canal_7" onclick="canais(7)"> <div class="col-4">  7  </div> </button>
+                  <button class="btn btn-primary" id="canal_8" onclick="canais(8)"> <div class="col-4">  8  </div> </button>
+                  <button class="btn btn-primary" id="canal_9" onclick="canais(9)"> <div class="col-4">  9  </div> </button>
+      
+                </div>
+                <div class="row">
+                  <button class="btn btn-primary" id="canal_0" onclick="canais(0)"> <div class="col-12">  0  </div> </button>
+                </div>
+              </div>
+            
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-12"> <label for="Volume"> Volume</label>
+                <input type="range"  min="0" max="100"></div>
+            </div>
+            <div class="row">
+                <div class="col-6 justify-content: center" > 
+                <label  for="Dark Mode" id="checkbox"> Dark Mode</label>
+                    <input onclick="escuro()" type="checkbox"></div>
+                <div class="col-6 esconde"> <img src="comando.jpg" class="img-thumbnail" alt="comando tv" style="width: 80px;height:100px; margin-top: none; margin-bottom:px"> </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+</html>
