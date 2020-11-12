@@ -9,7 +9,7 @@ div{
 
 @media screen and (max-width: 576px) {
   div{
-  background-color: blue;}
+  background-color: green;}
 
   .esconde{
     display:none;
