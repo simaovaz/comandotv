@@ -8,8 +8,12 @@ div{
   }
 
 @media screen and (max-width: 576px) {
-  div{
-  background-color: green;}
+  div {
+    background-color: green;
+    color: yellow;
+    border-color: blue;
+    margin: 1px;
+  }
 
   .esconde{
     display:none;
